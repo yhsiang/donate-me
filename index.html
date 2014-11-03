@@ -123,7 +123,7 @@
         $('.donate').on('click', function(e) {
             var email = $('input.email').val();
             if(IsEmail(email)){
-                $.post('http://donate-ly.herokuapp.com/send-donation', {email: email}, function(data){
+                $.post('https://donate-ly.herokuapp.com/send-donation', {email: email}, function(data){
                     if(data === 'OK'){
                         alert('請到信箱收信，或者檢查一下垃圾信箱，謝謝。');
                     }
