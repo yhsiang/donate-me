@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
 
 <head>
 
@@ -38,9 +38,31 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="#page-top">Donate LY</a>
             </div>
 
+             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">我是誰?</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#plan">贊助計畫</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#donation_details">捐款明細</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <!-- /.container-fluid -->
     </nav>
@@ -61,20 +83,98 @@
                         <span class="name">支持 LY 到 g0v.us 黑客松</span>
                         <hr class="star-light">
                         <!-- <span class="skills">Web Developer </span> -->
-                        <p class="skills"> g0v.us(g0v美東社群) 11/22~23 將在DC舉辦黑客松</p>
-                        <p>11/18-22 LY人在新加坡參加jsconf.asia。結束之後想到美國參加這場黑客松。機票費用大概是$1871(USD)約是 NT 57,000 。</p>
-                        <p>希望能夠募到一半以上的機票費用，大概是3萬五千台幣。</p>
-                        <p>如果無法成行，我會將所有收到的捐款轉捐給<a style="color: #5677fc;" href="http://ocf.tw/">ocf 財團法人開放文化基金會</a>。</p>
-                        <input type="email" class="form-control email" placeholder="Email" id="email" required data-validation-required-message="Please enter your email.">
-                        <button  class="btn btn-success btn-lg donate">請寄給我捐款資訊</button>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <article>
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>我是誰？</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-lg-5">
+                    <p>我叫LY</p>
+                    <p>目前擔任沃草工程師</p>
+                    <p>平常熱衷參與g0v社群活動。</p>
+                    <p>除了列出來的專案外，其他大小專案都有commit痕跡，因為貢獻不多就不一一列舉。</p>
+                    <p>總之，是個熱愛coding和commit的人。</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>參與過的專案有
+                        <ul>
+                            <li><a href="http://ly.g0v.tw">國會大代誌</a></li>
+                            <li><a href="http://ivod.ly.g0v.tw">立院影城</a></li>
+                            <li><a href="http://env.g0v.tw">台灣環境Dashboard</a></li>
+                            <li>零時前端松</li>
+                            <li>g0vXwatchout Summer of Code</li>
+                            <li>我說錯了嗎</li>
+                            <li>50天50張選舉圖</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <p>參與g0v給過的演講
+                        <ul>
+                            <li><a href="http://yhsiang.github.io/talks/nctu-debug/">介紹零時政府@交大敵霸閣</a></li>
+                            <li><a href="https://speakerdeck.com/yhsiang/from-congress-cinema-to-civic-live-broadcast">從立院影城到公民直播串流技術@COSCUP</a></li>
+                            <li><a href="https://speakerdeck.com/yhsiang/reactjs-at-mosut-x-tainan-dot-py">Reactjs @ MOSUT x Tainan.py</a></li>
+                            <li><a href="https://speakerdeck.com/yhsiang/g0v-usual-day-of-an-internet-citizen">g0v網路公民的日常@串門子媒體創作營</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="plan">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>贊助計畫</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-lg-offset-3">
+                    <div class="intro-text">
+                        <p class="skills"> g0v.us(g0v美東社群) 11/22~23 將在DC舉辦黑客松</p>
+                        <p>11/18-22，我的人在新加坡參加jsconf.asia。</p>
+                        <p>結束之後想到美國參加這場黑客松。機票費用大概是$1871(USD)約是 NT 57,000 。</p>
+                        <p>希望能夠募到一半以上的機票費用，大概是3萬五千台幣。</p>
+                        <p>如果無法成行，我會將所有收到的捐款轉捐給 <a style="color: #5677fc;" href="http://ocf.tw/">ocf 財團法人開放文化基金會</a>。</p>
+                        <p>填入您的Email後，會自動將匯款帳戶資訊送到您的Email帳號裡面</p>
+                        <p>請記得轉帳後，將末5碼以及金額回覆給我</p>
+                        <form>
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Email</label>
+                                <input type="email" class="form-control email" placeholder="請輸入您的Email" id="email" required data-validation-required-message="Please enter your email.">
+                            </div>
+                            <div id="success"></div>
+                            <div class="row">
+                                <div class="form-group col-xs-12">
+                                    <button  class="btn btn-success btn-lg donate">請寄給我捐款資訊</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="donation_details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>捐款明細</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+        </div>
         <table class="table table-striped">
-            <caption>捐款明細</caption>
             <thead>
                 <tr><th>捐款金額</th><th>末3碼</th></tr>
             </thead>
@@ -83,7 +183,7 @@
             <tfoot>
             </tfoot>
         </table>
-    </artcile>
+    </section>
     <footer>
         <div class="footer-below">
             <div class="container">
