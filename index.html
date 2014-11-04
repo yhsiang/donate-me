@@ -349,6 +349,7 @@
 
         });
         $('.donate').on('click', function(e) {
+            e.preventDefault();
             var email = $('input.email').val();
             if(IsEmail(email)){
                 $.post('https://donate-ly.herokuapp.com/send-donation', {email: email}, function(data){
