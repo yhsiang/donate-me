@@ -35,6 +35,16 @@
             top: -6px;
             left: 5px;
         }
+        @media(min-width:1024px) {
+            .cost {
+                width: 60%;
+            }
+        }
+        @media(min-width: 768px) and (max-width:1024px) {
+            .cost {
+                width: 90%;
+            }
+        }
         @media(min-width:768px) {
             .logo-wethepeople img {
                 margin-top: 16px;
@@ -56,7 +66,6 @@
                 margin-top: 30px;
                 margin-bottom: 0;
             }
-
         }
         @media(min-width: 380px) and (max-width: 768px) {
             .logo-wethepeople img {
@@ -70,6 +79,9 @@
             }
             .logo-g0vus img {
                 width: 234px;
+            }
+             .cost {
+                width: 95%;
             }
         }
     </style>
@@ -108,6 +120,9 @@
                     </li>
                     <li class="page-scroll">
                         <a href="#plan">贊助計畫</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#update">進度報告</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#how-to-donate">如何支持LY?</a>
@@ -237,6 +252,26 @@
             </div>
         </div>
     </section>
+     <section id="update">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>進度報告</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-lg-offset-3">
+                    <div class="intro-text">
+                      <p>跟大家報告，非常感謝大家熱心的幫忙，目前雖然進度只到57%，還是先把機票訂下去再說。</p>
+                      <p>以下是我目前機票的帳單花費</p>
+                      <img class="cost" src="img/flight-cost.png">
+                      <p>希望可以繼續支持，讓募資計劃可以達標，謝謝！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="how-to-donate">
         <div class="container">
             <div class="row">
@@ -282,7 +317,11 @@
                 <div class"col-lg-12">
                     <table class="table table-striped table-responsive">
                         <thead>
-                            <tr><th class="text-center">捐款金額</th><th >末3碼</th></tr>
+                            <tr>
+                                <th class="text-center">捐款金額</th>
+                                <th class="text-center">末3碼</th>
+                                <th class="text-center">LY應commit數量</th>
+                            </tr>
                         </thead>
                         <tbody class="donation-detail">
                         </tbody>
@@ -335,9 +374,9 @@
             var total = 35000;
             var donation_count = 0;
             data.feed.entry.map(function(row){
-
-                donation_count += ~~row["gsx$捐款金額"]["$t"].replace(',','').match(/^NT\$(\d+)/)[1];
-                var result = '<tr><td class="text-center">' + row["gsx$捐款金額"]["$t"] + '</td><td>' + row["gsx$末5碼"]["$t"]+ '</td></tr>';
+                value = ~~row["gsx$捐款金額"]["$t"].replace(',','').match(/^NT\$(\d+)/)[1];
+                donation_count += value
+                var result = '<tr><td class="text-center">' + row["gsx$捐款金額"]["$t"] + '</td><td class="text-center">' + row["gsx$末5碼"]["$t"]+ '</td><td class="text-center">' + Math.ceil(value / 100) +'</td></tr>';
 
                 $('.donation-detail').append(result);
             });
