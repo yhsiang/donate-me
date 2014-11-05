@@ -260,20 +260,20 @@
                     <hr class="star-primary">
                 </div>
             </div>
-      <!--       <div class="row">
+            <div class="row">
                 <div class="col-lg-12 col-lg-offset-3">
                     <div class="intro-text">
                       <p>跟大家報告，非常感謝大家熱心的幫忙，</p>
                       <p>目前雖然進度只到57%，還是先把機票訂下去再說。</p>
                       <p>以下是我目前機票的帳單花費</p>
-                      <p>因為便宜和時間合適的機票不太好訂，最後定到了這張。</p>
-                      <p> 11/22 01:05am SIN -> AMS -> 11/22 03:35pm IAD</p>
-                      <p> 11/25 06:05pm IAD -> AMS -> 11/27 03:50pm TPE</p>
+                      <p>放棄了最後一天的jsconf以後就有便宜的機票了！</p>
+                      <p> 11/21 06:55am SIN -> NRT -> DTW -> 11/21 09:08pm IAD</p>
+                      <p> 11/25 06:00am IAD -> JFK -> NRT -> 11/26 09:25pm TPE</p>
                       <img class="cost" src="img/flight-cost.png">
-                      <p>希望可以各位多繼續支持，讓支持計劃可以達標，謝謝！</p>
+                      <p>各位願意的話，希望可以繼續支持到整張機票的錢，謝謝 &lt;(_ _)&gt;</p>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </section>
     <section id="how-to-donate">
@@ -378,7 +378,7 @@
             var total = 35000;
             var donation_count = 0;
             data.feed.entry.map(function(row){
-                value = ~~row["gsx$捐款金額"]["$t"].replace(',','').match(/^NT\$(\d+)/)[1];
+                value = ~~row["gsx$捐款金額"]["$t"].replace(',','').match(/^NT\$(\d+)/)[1] || 0;
                 donation_count += value
                 var result = '<tr><td class="text-center">' + row["gsx$捐款金額"]["$t"] + '</td><td class="text-center">' + row["gsx$末5碼"]["$t"]+ '</td><td class="text-center">' + Math.ceil(value / 100) +'</td></tr>';
 
