@@ -142,7 +142,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h3 class="donation-progress">募款進度</h3>
-                    <div class="donation-target pull-right">35,000</div>
+                    <div class="donation-target pull-right">20,000</div>
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
                         <span class="sr-only"></span>
@@ -375,7 +375,7 @@
             return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
         $.getJSON("https://spreadsheets.google.com/feeds/list/1-HQnaySySKZQ3rOMeYUnlsU-LCaL0QVTPikrzLE0SrQ/od6/public/values?alt=json", function(data){
-            var total = 35000;
+            var total = 20000;
             var donation_count = 0;
             data.feed.entry.map(function(row){
                 value = ~~row["gsx$捐款金額"]["$t"].replace(',','').match(/^NT\$(\d+)/)[1] || 0;
